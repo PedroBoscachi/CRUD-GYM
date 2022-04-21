@@ -8,8 +8,8 @@ namespace Gym.Models
     public class Employee
     {
         public int Id { get; set; }
-        public String Name { get; set; }
-        public String Email { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
         private static List<Employee> employees = new List<Employee>();
         public static IQueryable<Employee> Employees
         {
