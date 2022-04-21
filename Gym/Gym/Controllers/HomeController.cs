@@ -49,5 +49,24 @@ namespace Gym.Controllers
             return RedirectToAction("Employees");
         }
 
+        [HttpGet]
+        public IActionResult RegisterCustomer(int? id)
+        {
+            if(id.HasValue && Customer.Customers.Any(c => c.Id == id))
+            {
+                var customer = Customer.Customers.Single(c => c.Id == id);
+                return View(customer);
+            }
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult RegisterCustomer(Customer customer)
+        {
+            Customer.Save(customer);
+            return RedirectToAction("Customers");
+        }
+
     }
 }
