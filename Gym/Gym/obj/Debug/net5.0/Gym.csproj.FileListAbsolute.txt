@@ -355,3 +355,4 @@ D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\ref\Gym.dll
 D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Gym.pdb
 D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Gym.genruntimeconfig.cache
 D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\Employees.cshtml.g.cs
+D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\Customers.cshtml.g.cs

@@ -20,5 +20,10 @@ namespace Gym.Controllers
         {
             return View(Employee.Employees);
         }
+
+        public IActionResult Customers()
+        {
+            return View(Customer.Customers);
+        }
     }
 }
