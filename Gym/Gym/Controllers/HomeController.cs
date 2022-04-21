@@ -25,5 +25,29 @@ namespace Gym.Controllers
         {
             return View(Customer.Customers);
         }
+
+        public IActionResult Equipments()
+        {
+            return View(Equipment.Equipments);
+        }
+
+        [HttpGet]
+        public IActionResult RegisterEmployee(int? id)
+        {
+            if(id.HasValue && Employee.Employees.Any(u => u.Id == id))
+            {
+                var employee = Employee.Employees.Single(e => e.Id == id);
+                return View(employee);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult RegisterEmployee(Employee employee)
+        {
+            Employee.Save(employee);
+            return RedirectToAction("Employees");
+        }
+
     }
 }

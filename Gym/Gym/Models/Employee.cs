@@ -32,5 +32,32 @@ namespace Gym.Models
             Employee.employees.Add(
                 new Employee { Id = 5, Name = "Vick", Email = "vick@gmail.com" });
         }
+
+        public static void Save(Employee employee)
+        {
+            var existingEmployee = Employee.employees.Find(e => e.Id == employee.Id);
+            if(existingEmployee != null)
+            {
+                existingEmployee.Name = employee.Name;
+                existingEmployee.Email = employee.Email;
+            }
+            else
+            {
+                int biggestId = Employee.Employees.Max(e => e.Id);
+                employee.Id = biggestId + 1;
+                Employee.employees.Add(employee);
+            }
+        }
+
+        public static bool Delete(int id)
+        {
+            var existingEmployee = Employee.employees.Find(e => e.Id == id);
+            if(existingEmployee != null)
+            {
+                return Employee.employees.Remove(existingEmployee);
+            }
+
+            return false;
+        }
     }
 }

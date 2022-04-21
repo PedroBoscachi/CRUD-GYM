@@ -1,26 +1,24 @@
-﻿@model IQueryable<Employee>
+﻿@model IQueryable<Equipment>
 
-<a href="/Home/RegisterEmployee" class="btn btn-primary">New employee</a>
-
-<h1>Employees List</h1>
+<h1>Equipments List</h1>
 <hr />
 
 <table class="table table-bordered table-striped">
     <thead class="bg-dark text-light text-center">
         <tr>
             <th>NAME</th>
-            <th>E-MAIL</th>
+            <th>PRICE</th>
             <th>ACTIONS</th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var employee in Model)
-         {
+        @foreach (var equipment in Model)
+        {
             <tr>
-                <td>@employee.Name</td>
-                <td>@employee.Email</td>
+                <td>@equipment.Name</td>
+                <td>@equipment.Price</td>
                 <td>Nothing yet</td>
             </tr>
-         }
+        }
     </tbody>
 </table>
