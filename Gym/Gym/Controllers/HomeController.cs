@@ -68,5 +68,24 @@ namespace Gym.Controllers
             return RedirectToAction("Customers");
         }
 
+        [HttpGet]
+        public IActionResult RegisterEquipment(int? id)
+        {
+            if(id.HasValue && Equipment.Equipments.Any(e => e.Id == id))
+            {
+                var equipment = Equipment.Equipments.Single(e => e.Id == id);
+                return View(equipment);
+            }
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult RegisterEquipment(Equipment equipment)
+        {
+            Equipment.Save(equipment);
+            return RedirectToAction("Equipments");
+        }
+
     }
 }

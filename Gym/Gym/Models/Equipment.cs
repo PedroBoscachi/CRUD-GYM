@@ -32,5 +32,21 @@ namespace Gym.Models
             Equipment.equipments.Add(new Equipment { Id = 5, Name = "Dumbbell Set", Price = 33 }
                 );
         }
+
+        public static void Save(Equipment equipment)
+        {
+            Equipment existingEquipment = Equipment.equipments.Find(e => e.Id == equipment.Id);
+            if(existingEquipment != null)
+            {
+                existingEquipment.Name = equipment.Name;
+                existingEquipment.Price = equipment.Price;
+            }
+            else
+            {
+                int biggestId = Equipment.Equipments.Max(e => e.Id);
+                equipment.Id = biggestId + 1;
+                equipments.Add(equipment);
+            }
+        }
     }
 }
