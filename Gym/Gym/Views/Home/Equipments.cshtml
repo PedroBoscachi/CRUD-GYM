@@ -21,9 +21,9 @@
         @foreach (var equipment in Model)
         {
             <tr>
-                <td>@equipment.Name</td>
-                <td>@equipment.Price</td>
-                <td class="text-center">
+                <td class="w-25">@equipment.Name</td>
+                <td class="w-25">@equipment.Price</td>
+                <td class="text-center w-25">
                     <a asp-action="RegisterEquipment" asp-route-id="@equipment.Id" class="btn btn-sm
                        btn-secondary" style="width: 35%;">
                         Change

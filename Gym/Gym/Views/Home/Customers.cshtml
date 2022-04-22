@@ -23,11 +23,11 @@
             @foreach (var customer in Model)
             {
                 <tr>
-                    <td>@customer.Name</td>
-                    <td>@customer.State</td>
-                    <td class="text-center">
+                    <td class="w-25">@customer.Name</td>
+                    <td class="w-25">@customer.State</td>
+                    <td class="text-center w-25">
                         <a asp-action="RegisterCustomer" asp-route-id="@customer.Id" class="btn btn-sm
-                       btn-secondary mr-2" style="width: 35%;">
+                       btn-secondary" style="width: 35%;">
                             Change
                         </a>
                         <a asp-action="DeleteCustomer" asp-route-id="@customer.Id" class="btn btn-sm

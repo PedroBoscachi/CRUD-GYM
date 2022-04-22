@@ -361,3 +361,5 @@ D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\Regi
 D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\DeleteEmployee.cshtml.g.cs
 D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\DeleteCustomer.cshtml.g.cs
 D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\DeleteEquipment.cshtml.g.cs
+D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Shared\_MessageError.cshtml.g.cs
+D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Shared\_MessageInfo.cshtml.g.cs
