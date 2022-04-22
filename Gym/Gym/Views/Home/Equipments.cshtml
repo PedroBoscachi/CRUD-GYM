@@ -1,9 +1,13 @@
 ﻿@model IQueryable<Equipment>
+@{
+    ViewBag.Subtitle = "Equipments";
+}
 
-<a href="/Home/RegisterEquipment" class="btn btn-primary">New equipment</a>
-
-<h1>Equipments List</h1>
-<hr />
+<div class="mt-2">
+    <h1 style="display: inline-block" class="mt-2">Equipments List</h1>
+    <a href="/Home/RegisterEquipment" class="btn btn-primary btn-lg" style="position: absolute; left: 75%; top: 10%;">New equipment</a>
+    <hr />
+</div>
 
 <table class="table table-bordered table-striped">
     <thead class="bg-dark text-light text-center">
@@ -19,7 +23,16 @@
             <tr>
                 <td>@equipment.Name</td>
                 <td>@equipment.Price</td>
-                <td>Nothing yet</td>
+                <td class="text-center">
+                    <a asp-action="RegisterEquipment" asp-route-id="@equipment.Id" class="btn btn-sm
+                       btn-secondary" style="width: 35%;">
+                        Change
+                    </a>
+                    <a asp-action="DeleteEquipment" asp-route-id="@equipment.Id" class="btn btn-sm
+                       btn-danger" style="width: 35%;">
+                        Delete
+                    </a>
+                </td>
             </tr>
         }
     </tbody>

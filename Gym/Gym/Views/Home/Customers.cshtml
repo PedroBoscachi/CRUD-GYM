@@ -1,26 +1,42 @@
 ﻿@model IQueryable<Customer>
+@{ 
+    ViewBag.Subtitle = "Customers";
+}
 
-<a href="/Home/RegisterCustomer" class="btn btn-primary">New customer</a>
 
-<h1>Customers List</h1>
-<hr />
+<div class="mt-2">
+    <h1 style="display: inline-block" class="mt-2">Customers List</h1>
+    <a href="/Home/RegisterCustomer" class="btn btn-primary btn-lg" style="position: absolute; left: 75%; top: 10%;">New customer</a>
+    <hr />
+</div>
 
-<table class="table table-bordered table-striped">
-    <thead class="bg-dark text-light text-center">
-        <tr>
-            <th>NAME</th>
-            <th>STATE</th>
-            <th>ACTIONS</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var customer in Model)
-         {
+<div>
+    <table class="table table-bordered table-striped">
+        <thead class="bg-dark text-light text-center">
             <tr>
-                <td>@customer.Name</td>
-                <td>@customer.State</td>
-                <td>Nothing Yet</td>
+                <th>NAME</th>
+                <th>STATE</th>
+                <th>ACTIONS</th>
             </tr>
-         }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.Name</td>
+                    <td>@customer.State</td>
+                    <td class="text-center">
+                        <a asp-action="RegisterCustomer" asp-route-id="@customer.Id" class="btn btn-sm
+                       btn-secondary mr-2" style="width: 35%;">
+                            Change
+                        </a>
+                        <a asp-action="DeleteCustomer" asp-route-id="@customer.Id" class="btn btn-sm
+                       btn-danger" style="width: 35%;">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

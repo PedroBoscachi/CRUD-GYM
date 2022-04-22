@@ -48,5 +48,15 @@ namespace Gym.Models
                 equipments.Add(equipment);
             }
         }
+
+        public static bool Delete(int id)
+        {
+            var existingEquipment = Equipment.equipments.Find(e => e.Id == id);
+            if(existingEquipment != null)
+            {
+                return Equipment.equipments.Remove(existingEquipment);
+            }
+            return false;
+        }
     }
 }

@@ -1,9 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var actualAction = ViewContext.RouteData.Values["action"].ToString();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Gym</title>
+    <title>@ViewBag.Subtitle</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -16,10 +20,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarMain">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" asp-action="Employees">Employees</a>
-                        <a class="nav-link" asp-action="Customers">Customers</a>
-                        <a class="nav-link" asp-action="Equipments">Equipments</a>
+                        <a class="nav-link @(actualAction == "Index" ? "active" : "")" asp-action="Index">Home</a>
+                        <a class="nav-link @(actualAction == "Employees" ? "active" : "")" asp-action="Employees">Employees</a>
+                        <a class="nav-link @(actualAction == "Customers" ? "active" : "")" asp-action="Customers">Customers</a>
+                        <a class="nav-link @(actualAction == "Equipments" ? "active" : "")" asp-action="Equipments">Equipments</a>
                     </div>
                 </div>
             </div>
@@ -29,6 +33,11 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+    </div>
+
+    <div class="text-light bg-dark p-2 fixed-bottom text-center">
+        By Pedro Henrique Farias Boscachi<br />
+        @RenderSection("Footer", false)
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -1,0 +1,17 @@
+﻿@model Customer
+@{
+    ViewBag.Subtitle = "Customer Removal";
+}
+
+<h1>Customer Removal</h1>
+<hr />
+<h4>Do you really want do delete the customer <span class="text-danger">@Model.Name?</span></h4>
+<form method="POST" class="w-25">
+    <input type="hidden" asp-for="Id">
+    <div class="mt-3">
+        <a asp-action="Customers" class="btn btn-success">No</a>
+        <button class="btn btn-danger" type="submit">
+            Yes
+        </button>
+    </div>
+</form>

@@ -1,9 +1,13 @@
 ﻿@model IQueryable<Employee>
+@{
+    ViewBag.Subtitle = "Employees";
+}
 
-<a href="/Home/RegisterEmployee" class="btn btn-primary">New employee</a>
-
-<h1>Employees List</h1>
-<hr />
+<div class="mt-2">
+    <h1 style="display: inline-block" class="mt-2">Employees List</h1>
+    <a href="/Home/RegisterEmployee" class="btn btn-primary btn-lg" style="position: absolute; left: 75%; top: 10%;">New employee</a>
+    <hr />
+</div>
 
 <table class="table table-bordered table-striped">
     <thead class="bg-dark text-light text-center">
@@ -14,13 +18,22 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var employee in Model)
-         {
+        @foreach (var employee in Model)
+        {
             <tr>
                 <td>@employee.Name</td>
                 <td>@employee.Email</td>
-                <td>Nothing yet</td>
+                <td class="text-center">
+                    <a asp-action="RegisterEmployee" asp-route-id="@employee.Id" class="btn btn-sm
+                       btn-secondary" style="width: 35%;">
+                        Change
+                    </a>
+                    <a asp-action="DeleteEmployee" asp-route-id="@employee.Id" class="btn btn-sm
+                       btn-danger" style="width: 35%;">
+                        Delete
+                    </a>
+                </td>
             </tr>
-         }
+        }
     </tbody>
 </table>

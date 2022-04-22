@@ -358,3 +358,6 @@ D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\Equi
 D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\RegisterEmployee.cshtml.g.cs
 D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\RegisterCustomer.cshtml.g.cs
 D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\RegisterEquipment.cshtml.g.cs
+D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\DeleteEmployee.cshtml.g.cs
+D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\DeleteCustomer.cshtml.g.cs
+D:\Pedro\CURSO ASP NET\6-CRUD GYM\Gym\Gym\obj\Debug\net5.0\Razor\Views\Home\DeleteEquipment.cshtml.g.cs
