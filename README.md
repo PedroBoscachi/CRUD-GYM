@@ -2,6 +2,21 @@
 
 <p>This project was made to test improve my habilites in C# and ASP.NET. Consists of a program that can insert, return, edit and remode data. The main theme is gym, so in the program the are employees, customers and equipment.</p>
 
+<hr>
+
+## -----Showing the Project-----
+<h3>Home</h3>
+<img src="img/home.gif">
+<h3>Adding, removing and editing Employees</h3>
+<img src="img/employee.gif">
+<h3>Adding, removing and editing Customers</h3>
+<img src="img/customer.gif">
+<h3>Adding, removing and editing Equipments</h3>
+<img src="img/equipment.gif">
+
+
+<hr>
+
 ## 🔨 Tools
 
 - [.Net](https://dotnet.microsoft.com/en-us/)
